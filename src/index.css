@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: Noto Sans KR, sans-serif;
+}
+
+.main {
+  min-height: calc(100vh - 4rem - 224px);
+}
+
+.drawer {
+  display: grid;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-container .carousel-slide {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+
+.carousel-container .carousel-slide:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+}
+
+.carousel-container .carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.menu[class*="p-"] li *,
+.menu[class*="p-"] li button {
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.card figure img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.card:hover .transition-transform {
+  transform: scale(1.25);
+}
+
+figure[data-v-73581b5a] {
+  min-width: 20em;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-container .carousel-slide {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-container .carousel-slide .carousel-description {
+    bottom: 0;
+  }
+}
